@@ -10,7 +10,7 @@ class GithubFetcher
     @client.repositories(@github)
   end
 
-  def location
-    @client.user(@github).location
+  def find_stats
+    @client.user(@github)
   end
 end

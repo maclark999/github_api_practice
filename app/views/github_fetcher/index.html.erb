@@ -20,5 +20,26 @@
   </tbody>
 </table>
 
-<h2>My Location</h2>
-<strong><%= @location %></strong>
+<table border = 1>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Created at</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Company</th>
+      <th>avatar</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @location.location %></td>
+      <td><%= @location.created_at %></td>
+      <td><%= @location.email%></td>
+      <td><%= @location.name %></td>
+      <td><%= @location.company %></td>
+      <td><%= image_tag @location.avatar_url %></td>
+    </tr>
+  </tbody>
+</table>
