@@ -1,0 +1,24 @@
+<%= form_tag '/index' %>
+<%= label_tag 'Github Username' %>
+<%= text_field_tag :github %>
+<%= submit_tag "find repos" %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Repos</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @repo.github_repos.each do |repo| %>
+    <tr>
+      <td><%= repo.name %><td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>My Location</h2>
+<strong><%= @location %></strong>
